@@ -1,4 +1,4 @@
-package com.rnnproject2;
+package com.facebook;
 
 import com.reactnativenavigation.NavigationActivity;
 

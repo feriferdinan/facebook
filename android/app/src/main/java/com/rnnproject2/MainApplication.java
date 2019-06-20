@@ -1,4 +1,4 @@
-package com.rnnproject2;
+package com.facebook;
 
 import android.app.Application;
 
