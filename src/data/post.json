@@ -1,0 +1,47 @@
+[
+    {
+    "name": "Bill Gates",
+    "profilePict": "https://image.cnbcfm.com/api/v1/image/104907724-Bill_Gates_Wave.jpg?v=1551374691&w=1400&h=950",
+    "datePost":"1 min ago",
+    "content": {
+        "text": "Linux is the best ;)",
+        "image": "https://image.cnbcfm.com/api/v1/image/104907724-Bill_Gates_Wave.jpg?v=1551374691&w=1400&h=950"
+    },
+    "like": "132",
+    "comment": "13232"
+},
+{
+    "name": "Mark Zukenberk",
+    "profilePict": "https://media.wired.com/photos/592676467034dc5f91beb80e/master/pass/MarkZuckerberg.jpg",
+    "datePost":"1 min ago",
+    "content": {
+        "text": "Selamat Malam gan :)",
+        "image": "https://image.cnbcfm.com/api/v1/image/104907724-Bill_Gates_Wave.jpg?v=1551374691&w=1400&h=950"
+    },
+    "like": "132",
+    "comment": "13232"
+},
+{
+    "name": "Linus Torvalds",
+    "profilePict": "https://cdn.britannica.com/s:300x300/99/124299-004-225EA56D.jpg",
+    "datePost":"4 min ago",
+    "content": {
+        "text": "Windows is the best",
+        "image": "https://image.cnbcfm.com/api/v1/image/104907724-Bill_Gates_Wave.jpg?v=1551374691&w=1400&h=950"
+    },
+    "like": "132",
+    "comment": "13232"
+    },
+{
+    "name": "Gilfoyle",
+    "profilePict": "https://img.sharetv.com/shows/characters/large/silicon_valley.gilfoyle.jpg",
+    "datePost":"9 min ago",
+    "content": {
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu congue leo. Vestibulum nec lacus id orci malesuada lobortis. Aliquam condimentum viverra dui, at aliquet ante egestas at. Vivamus fringilla, enim eu ultricies ultricies, urna augue ornare ligula, et interdum quam urna ut diam. Sed sit amet malesuada dui. Morbi vulputate rhoncus nisl, sit amet maximus dolor mattis sit amet. Quisque lacinia finibus malesuada. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+        "image": "https://image.cnbcfm.com/api/v1/image/104907724-Bill_Gates_Wave.jpg?v=1551374691&w=1400&h=950"
+    },
+    "like": "132",
+    "comment": "13232"
+    }
+
+    ]

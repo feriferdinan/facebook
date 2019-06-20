@@ -1,0 +1,103 @@
+{
+    "profile": [
+    {
+        "title" :"Mark Zukenberk",
+        "subtitle" :"see your profile",
+        "avatar_url" :"https://media.wired.com/photos/592676467034dc5f91beb80e/master/pass/MarkZuckerberg.jpgy"
+     },
+    {
+        "title" :"Mark Fanbase",
+        "subtitle" :"",
+        "avatar_url" :"https://media.wired.com/photos/592676467034dc5f91beb80e/master/pass/MarkZuckerberg.jpgy"
+     }
+    ],
+    "shorcut":[
+    {
+        "title" : "Friends",
+        "subtitle" : "999 request",
+        "icon" : "users",
+        "type" : "entypo",
+        "action" : ""
+    },
+    {
+        "title" : "Group",
+        "subtitle" : "",
+        "icon" : "users",
+        "type" : "font-awesome",
+        "action" : ""
+    },
+    {
+        "title" : "Watched Video",
+        "subtitle" : "",
+        "icon" : "airplay",
+        "type" : "material",
+        "action" : ""
+    },
+    {
+        "title" : "Event",
+        "subtitle" : "",
+        "icon" : "calendar",
+        "type" : "antdesign",
+        "action" : ""
+    },
+    {
+        "title" : "Memories",
+        "subtitle" : "so",
+        "icon" : "history",
+        "type" : "font-awesome",
+        "action" : ""
+    },
+    {
+        "title" : "Tersimpan",
+        "subtitle" : "",
+        "icon" : "ios-bookmark",
+        "type" : "ionicon",
+        "action" : ""
+    },
+    {
+        "title" : "Halaman",
+        "subtitle" : "",
+        "icon" : "flag",
+        "type" : "antdesign",
+        "action" : ""
+    },
+    {
+        "title" : "Tempat Sekitar",
+        "subtitle" : "",
+        "icon" : "location-pin",
+        "type" : "entypo",
+        "action" : ""
+    },
+    {
+        "title" : "Teman Sekitar",
+        "subtitle" : "",
+        "icon" : "users",
+        "type" : "entypo",
+        "action" : ""
+    },
+    {
+        "title" : "Rekomendasi",
+        "subtitle" : "",
+        "icon" : "stars",
+        "type" : "material-icon",
+        "action" : ""
+    },
+    {
+        "title" : "Temukan Orang",
+        "subtitle" : "",
+        "icon" : "users",
+        "type" : "font-awesome",
+        "action" : ""
+    },
+    {
+        "title" : "Lihat Lainya",
+        "subtitle" : "",
+        "icon" : "grid",
+        "type" : "feather",
+        "action" : ""
+    }
+
+
+]
+}
+    
