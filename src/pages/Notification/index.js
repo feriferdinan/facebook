@@ -18,13 +18,16 @@ import Tab from '../Home/Tab'
 
 import styles from './Notification.style'
 import FriendRequest from './FriendRequest'
+import NewNotification from './NewNotification'
+import OldNotification from './OldNotification'
 
 
 export default class index extends Component {
 constructor(){
   super();
   this.state={
-    newfriend:require("../../data/friendrequest.json")
+    newfriend:require("../../data/friendrequest.json"),
+    newNotif:require("../../data/newNotification.json")
   }
 }
     
@@ -37,11 +40,13 @@ constructor(){
         <Header />
         <Tab  componentId={this.props.componentId} />
 
-          <ScrollView>
+          <ScrollView showsVerticalScrollIndicator={false} >
 
             <View style={styles.container} >
+              <NewNotification data={this.state.newNotif} />
               <FriendRequest data={this.state.newfriend} />
-
+              <OldNotification data={this.state.newNotif} />
+              <View style={{marginBottom:100}} ></View>
             </View>
           </ScrollView>
 

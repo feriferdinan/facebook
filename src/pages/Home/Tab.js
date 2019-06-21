@@ -37,17 +37,17 @@ export default class Tab extends Component {
           </View>
           <View style={styles.wrapperIconTab} >
             <TouchableOpacity>
-                <IconMCI style={styles.iconTab}  name="account-group-outline" size={30} color="#1778f2" onPress={() => this.goToScreen("Home")}  />
+                <IconMCI style={styles.iconTab}  name="account-group-outline" size={30} color="#1778f2" onPress={() => this.goToScreen("Group")}  />
             </TouchableOpacity>
           </View>
           <View style={styles.wrapperIconTab} >
             <TouchableOpacity>
-                <Icon style={{height:30,width:30,marginTop:5,opacity:0.7}}  name="store" size={22} color="#1778f2" onPress={() => this.goToScreen("Home")} />
+                <Icon style={{height:30,width:30,marginTop:5,opacity:0.7}}  name="store" size={22} color="#1778f2" onPress={() => this.goToScreen("MarketPlace")} />
             </TouchableOpacity>
           </View>
           <View style={styles.wrapperIconTab} >
             <TouchableOpacity>
-                <IconMCI style={styles.iconTab}  name="account-circle-outline" size={30} color="#1778f2" onPress={() => this.goToScreen("Home")} />
+                <IconMCI style={styles.iconTab}  name="account-circle-outline" size={30} color="#1778f2" onPress={() => this.goToScreen("Profile")} />
           </TouchableOpacity>
           </View>
           <View style={styles.wrapperIconTab} >

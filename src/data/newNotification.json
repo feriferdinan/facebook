@@ -1,0 +1,27 @@
+[
+    {
+    "name": "John Wick",
+    "profilePict": "https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fdam%2Fimageserve%2Fa7c0a756d6b04801bd97d880c40e4113%2F960x0.jpg%3Ffit%3Dscale",
+    "newNotificationContent":"Menyukai Status anda",
+    "date":"Kemarin pukul 20:49"
+    },
+    {
+    "name": "Barrack Obama",
+    "profilePict": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/220px-President_Barack_Obama.jpg",
+    "newNotificationContent":"Mulai Mengikuti anda",
+    "date":"Kemarin pukul 21:49"
+    },
+    {
+    "name": "Jack Ma",
+    "profilePict": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJvY1agogqnWtHSMjg6fgZSjSKy_t833wJki_i4vAsayqC7Ity",
+    "newNotificationContent":"Mengomentari Status anda",
+    "date":"Kemarin pukul 21:49"
+    },
+    {
+    "name": "Gilfoyle",
+    "profilePict": "https://img.sharetv.com/shows/characters/large/silicon_valley.gilfoyle.jpg",
+    "newNotificationContent":"Mengomentari Status anda",
+    "date":"Kemarin pukul 21:49"
+    }
+    
+]

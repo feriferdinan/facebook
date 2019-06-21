@@ -17,12 +17,39 @@ export default class StatusFooter extends Component {
     constructor(){
         super();
         this.state ={
-            total:0,
-            response:[]
+          iconName:'like2',
+          iconType:'antdesign',
+          iconPress:false,
+          IconColor:'#aaa',
+          response:[],
+          total:0,
         }
     }
     _setTotal =() =>{
         return this.props.response.reduce((a,b) =>a+b.count,0 );
+    }
+    _pressLikeIcon =(icon)=>{
+      if(this.state.iconPress){
+        this.setState({
+          iconName:'like2',
+          iconType:'antdesign',
+          iconPress:false,
+          IconColor:'#aaa',
+          total :this.state.total - 1
+        })
+      }else {
+        switch(icon) {
+          case 'like':
+            this.setState({
+              iconName:'like1',
+              iconType:'antdesign',
+              iconPress:true,
+              IconColor:'blue',
+              total :this.state.total + 1
+            })
+          
+        }
+      }
     }
     componentDidMount(){
         this.setState({
@@ -51,7 +78,13 @@ export default class StatusFooter extends Component {
             
                   <View style={styles.wrapperLikeComment} >
                   <TouchableOpacity >
-                  <IconAnt style={styles.likeComment}  name="like2" size={25} color="grey"
+                  <Icon 
+                      style={styles.likeComment}  
+                      name={this.state.iconName}
+                      type={this.state.iconType}
+                      color={this.state.IconColor}
+                      size={25} 
+                      onPress={() => this._pressLikeIcon('like',this.state.iconPress)}
                    />
                     </TouchableOpacity>
                   </View>

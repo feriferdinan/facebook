@@ -58,12 +58,12 @@ export default class FriendRequest extends Component {
                   <Text style={{fontWeight:'100',color:'grey',fontSize:12.5}} >{item.sameFriend} teman yang sama</Text>
                   <View style={{flexDirection:"row",marginTop:10}} >
                   <TouchableOpacity>
-                    <View style={{height:30,width:120,backgroundColor:"#1878f3",borderRadius:5,marginHorizontal:5}}>
+                    <View style={{height:30,width:120,backgroundColor:"#1878f3",borderRadius:5,marginRight:'4.5%'}}>
                       <Text style={{color:"#fff",fontWeight:"400",justifyContent:"center",textAlign:"center",paddingVertical:"5%"}} >KONFIRMASI</Text>
                     </View>
                     </TouchableOpacity>
                     <TouchableOpacity>
-                    <View style={{height:30,width:120,backgroundColor:"#ffff",borderRadius:5,borderWidth:0.5,marginHorizontal:5}}>
+                    <View style={{height:30,width:120,backgroundColor:"#ffff",borderRadius:5,borderWidth:0.5,marginLeft:"4.5%"}}>
                       <Text style={{color:"grey",fontWeight:"400",justifyContent:"center",textAlign:"center",paddingVertical:"5%"}} >HAPUS</Text>
                     </View>
                     </TouchableOpacity>
@@ -81,8 +81,8 @@ export default class FriendRequest extends Component {
             
                 <Divider color="grey" />
             <TouchableOpacity>
-                <View style={{ backgroundColor:'#ffffff'}} >
-                  <View style={{marginHorizontal:10,marginVertical:5,alignItems:"center"}} >
+                <View style={{ backgroundColor:'#ffffff',marginBottom:5}} >
+                  <View style={{marginHorizontal:10,marginVertical:10,alignItems:"center"}} >
                     <Text style={{fontWeight:'300',color:"grey"}}>Lihat Semua ></Text>
                   </View>
                 </View>
