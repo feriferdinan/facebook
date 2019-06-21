@@ -30,7 +30,8 @@ export default class Menu extends Component {
         <View>
         <Header />
         <Tab  componentId={this.props.componentId} />
-        <ScrollView>
+        <ScrollView showsVerticalScrollIndicator={false}   >
+
 
         {
             this.state.menu.profile.map((item,index) => {

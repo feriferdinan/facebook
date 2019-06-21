@@ -25,7 +25,7 @@ export default class index extends Component {
         <Tab  componentId={this.props.componentId} />
         <ScrollView>
             <View>
-
+              
             </View>
           </ScrollView>
           </View>

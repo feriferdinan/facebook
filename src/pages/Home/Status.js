@@ -33,7 +33,7 @@ export default class CreateStatus extends Component {
                 return(
           <View key={index} style={{marginTop:5,marginBottom:5}}  >
               <TouchableOpacity>
-            <View style={{flex:1,flexDirection:'row',paddingHorizontal:6 , backgroundColor:'#ffffff',position:'relative'}}  >
+            <View style={{flex:1,flexDirection:'row',paddingHorizontal:6 , backgroundColor:'#ffffff'}}  >
               <View style={{flex:1,marginTop:10}} >
                   <Image style={styles.imageProfile}
                   source={{uri:item.profilePict}}
@@ -49,12 +49,20 @@ export default class CreateStatus extends Component {
               </View>
               </TouchableOpacity>
 
-            <TouchableOpacity>
+            
               <View style={{backgroundColor:'#ffffff'}}  >
+              <TouchableOpacity>
                 <Text style={{padding:5}} >{item.content.text}</Text>
-                <Image source={{uri:item.content.image}} style={{width: '100%'}} />
+                </TouchableOpacity>
+                  <TouchableOpacity>                  
+                  <View style={{width:"100%",width:"100%",  flexDirection:'row',flexWrap:"wrap"}} >
+                    <Image source={{uri:item.content.image}} style={{height:105,width:'100%'}} />
+                  
+                </View>
+                </TouchableOpacity>
+                  
               </View>
-              </TouchableOpacity>
+             
 
               <Divider style={{backgroundColor:'grey'}} />
               <View style={{width:'100%', height:40,backgroundColor:'#ffffff'}} >
