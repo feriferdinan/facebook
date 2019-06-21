@@ -26,7 +26,7 @@ export default class CreateStatus extends Component {
             </View>
         <View style={{flex:1}} >
             <IconFeather style={{width:24,height:32,marginTop:8,marginLeft:5}}  name="image" size={25} color="grey" />
-            <Text style={{color:'grey',fontWeight:"100",fontSize:11.5,top:-6,left:1}} >Photo</Text>
+            <Text style={{color:'grey',fontWeight:"100",fontSize:11.5,top:-6,left:5}} >Foto</Text>
         </View>
     </View>
     )

@@ -32,32 +32,32 @@ export default class Tab extends Component {
         <View style={{flex:1,flexDirection:'row',paddingHorizontal:6}} >
           <View style={styles.wrapperIconTab} >
             <TouchableOpacity  >
-                <IconE style={styles.iconTab}  name="newsletter" size={30} color="grey" onPress={() => this.goToScreen("Home")} />
+                <IconE style={styles.iconTab}  name="newsletter" size={30} color="#1778f2" onPress={() => this.goToScreen("Home")} />
             </TouchableOpacity>
           </View>
           <View style={styles.wrapperIconTab} >
             <TouchableOpacity>
-                <IconMCI style={styles.iconTab}  name="account-group-outline" size={30} color="grey" onPress={() => this.goToScreen("Home")}  />
+                <IconMCI style={styles.iconTab}  name="account-group-outline" size={30} color="#1778f2" onPress={() => this.goToScreen("Home")}  />
             </TouchableOpacity>
           </View>
           <View style={styles.wrapperIconTab} >
             <TouchableOpacity>
-                <Icon style={{marginTop:5}}  name="store" size={21} color="grey" onPress={() => this.goToScreen("Home")} />
+                <Icon style={{height:30,width:30,marginTop:5,opacity:0.7}}  name="store" size={22} color="#1778f2" onPress={() => this.goToScreen("Home")} />
             </TouchableOpacity>
           </View>
           <View style={styles.wrapperIconTab} >
             <TouchableOpacity>
-                <IconMCI style={styles.iconTab}  name="account-circle-outline" size={30} color="grey" onPress={() => this.goToScreen("Home")} />
+                <IconMCI style={styles.iconTab}  name="account-circle-outline" size={30} color="#1778f2" onPress={() => this.goToScreen("Home")} />
           </TouchableOpacity>
           </View>
           <View style={styles.wrapperIconTab} >
             <TouchableOpacity>
-                <IconIon style={styles.iconTab}  name="ios-notifications-outline" size={30} color="grey" onPress={() => this.goToScreen("Notification")} />
+                <IconIon style={styles.iconTab}  name="ios-notifications-outline" size={30} color="#1778f2" onPress={() => this.goToScreen("Notification")} />
             </TouchableOpacity>
           </View>
           <View style={styles.wrapperIconTab} >
             <TouchableOpacity>
-                <IconFeather style={styles.iconTab}  name="menu" size={30} color="grey" onPress={() => this.goToScreen("Menu")} />
+                <IconFeather style={styles.iconTab}  name="menu" size={30} color="#1778f2" onPress={() => this.goToScreen("Menu")} />
             </TouchableOpacity>
           </View>
           </View>

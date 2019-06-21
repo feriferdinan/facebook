@@ -61,7 +61,9 @@ export default class index extends Component {
                 )
             }) 
           }
+            <View style={{marginBottom:25}} >
 
+            </View>
           </ScrollView>
           </View>
     )

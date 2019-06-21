@@ -12,6 +12,14 @@ import Status from './Status'
 
 
 export default class Home extends Component {
+  constructor(){
+    super()
+    this.state={
+     post:  require('../../data/post.json'),
+     story:  require('../../data/story.json')
+
+    }
+  }
 
   render() {
     return (
@@ -21,17 +29,17 @@ export default class Home extends Component {
            <Header />
           {/* Tab */}
               <Tab componentId={this.props.componentId}  />
-            <ScrollView>
+            <ScrollView showsVerticalScrollIndicator={false} >
 
                {/* Story */}
-                <Story />
+                <Story data={this.state.story} />
            
             <View style={{backgroundColor:'#dddde3',width:'100%'}} >
             {/* update status */}
             <CreateStatus />
 
             {/* Post */}
-              <Status />     
+              <Status data={this.state.post}/>     
             </View>
             </ScrollView>
         </View>

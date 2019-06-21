@@ -16,11 +16,11 @@ export default StyleSheet.create({
     iconTab:{
       width:30,
       height:30,
+      opacity: 0.7,
     },
     imageProfile:{
-      width:30,
-      height:30,
-      marginTop:5,
+      width:40,
+      height:40,
       marginLeft:5,
       borderRadius:100
     },
@@ -34,16 +34,16 @@ export default StyleSheet.create({
       alignItems:"flex-end"
     },
     imageStory:{
-      width:90,
-      height:150,
+      width:"100%",
+      height:"100%",
       borderRadius:10,
       resizeMode:'cover',
       position:'relative'
     },
     wrapperImageStory:{
       backgroundColor:'#f5f6f8',
-      width:90,
-      height:150,
+      width:120,
+      height:200,
       borderRadius:10,
       margin:5
     },
@@ -52,8 +52,8 @@ export default StyleSheet.create({
       resizeMode:'cover',
       position:'absolute',
       borderWidth:1,
-      width:32,
-      height:32,
+      width:40,
+      height:40,
       borderRadius:100,
       borderColor:'blue',
       justifyContent:'center',

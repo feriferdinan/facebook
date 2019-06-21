@@ -12,96 +12,35 @@ import IconF from 'react-native-vector-icons/Feather';
 
 import styles from './Home.style'
 
+import StatusHeader from './StatusHeader';
+import StatusBody from './StatusBody'
+import StatusFooter from './StatusFooter'
 
-export default class CreateStatus extends Component {
 
-    
-    constructor(){
-        super()
-        this.state={
-         post:  require('../../data/post.json')
-  
-        }
-      }
+export default class Status extends Component {
+   
 
   render() {
-  
+   
     return (
         
         <View>
         {
-            this.state.post.map((item,index) => {
+            this.props.data.map((item,index) => {
                 return(
           <View key={index} style={{marginTop:5,marginBottom:5}}  >
-              <TouchableOpacity>
-            <View style={{flex:1,flexDirection:'row',paddingHorizontal:6 , backgroundColor:'#ffffff'}}  >
-              <View style={{flex:1,marginTop:10}} >
-                  <Image style={styles.imageProfile}
-                  source={{uri:item.profilePict}}
-                  />
-              </View>
-              <View style={{flex:6,margin:10}} >
-              <Text style={{fontWeight:'bold',color:'black'}} >{item.name}</Text>
-              <Text style={{fontWeight:'100',color:'black'}} >{item.datePost}</Text>
-                  </View>
-              <View style={{flex:1,marginTop:15}} >
-              <IconF name="more-horizontal" size={30} color="grey" />
-              </View>
-              </View>
-              </TouchableOpacity>
-
+             <StatusHeader 
+                profilePict={item.profilePict}
+                name={item.name}
+                datePost={item.datePost}
+              />
             
-              <View style={{backgroundColor:'#ffffff'}}  >
-              <TouchableOpacity>
-                <Text style={{padding:5}} >{item.content.text}</Text>
-                </TouchableOpacity>
-                  <TouchableOpacity>                  
-                  <View style={{width:"100%",width:"100%",  flexDirection:'row',flexWrap:"wrap"}} >
-                    <Image source={{uri:item.content.image}} style={{height:105,width:'100%'}} />
-                </View>
-                 <TouchableOpacity>
-                <View style={{flexDirection:"row"}} >
-                 <View style={{marginLeft:5}} >
-                  <Icon name={item.response[0].name} 
-                        type={item.response[0].type}
-                        color={item.response[0].color}
-                        size={13}
-                    />
-                    </View>
-                <Text>{item.response[0].count}</Text>
-                </View>
-                </TouchableOpacity>
-                </TouchableOpacity>
-                  
-              </View>
-             
+                <StatusBody 
+                text={item.content.text}
+                image={item.content.image}
+                />
 
-              <Divider style={{backgroundColor:'grey'}} />
-              <View style={{width:'100%', height:40,backgroundColor:'#ffffff'}} >
-                <View style={{flex:1,flexDirection:'row',paddingHorizontal:6,backgroundColor:'#ffffff'}} >
-            
-                  <View style={styles.wrapperLikeComment} >
-                  <TouchableOpacity>
-                  <IconAnt style={styles.likeComment}  name="like2" size={25} color="grey" />
-                    </TouchableOpacity>
-                  </View>
-                
-                <View style={styles.wrapperLikeComment} >
-                <TouchableOpacity>
-                <IconFA5 style={styles.likeComment}  name="comment-alt" size={25} color="grey" />
-                 
-                  </TouchableOpacity>
-                </View>
-                <View style={styles.wrapperLikeComment} >
-                <TouchableOpacity>
-                <IconMCI style={styles.likeComment}  name="share-outline" size={30} color="grey" />
-                  </TouchableOpacity>
-                
-                </View>
-                </View>
-              </View>
-
-              <Divider style={{backgroundColor:'grey'}} />
+              <StatusFooter response={item.response} />
 
            
           </View>
@@ -112,3 +51,4 @@ export default class CreateStatus extends Component {
     )
   }
 }
+
