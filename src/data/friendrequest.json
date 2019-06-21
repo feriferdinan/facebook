@@ -1,0 +1,23 @@
+[
+    {
+    "name": "Bill Gates",
+    "profilePict": "https://image.cnbcfm.com/api/v1/image/104907724-Bill_Gates_Wave.jpg?v=1551374691&w=1400&h=950",
+    "sameFriend":23
+    },
+    {
+    "name": "Linus Torvalds",
+    "profilePict": "https://cdn.britannica.com/s:300x300/99/124299-004-225EA56D.jpg",
+    "sameFriend":91
+    },
+    {
+    "name": "Jack Ma",
+    "profilePict": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJvY1agogqnWtHSMjg6fgZSjSKy_t833wJki_i4vAsayqC7Ity",
+    "sameFriend":34
+    },
+    {
+    "name": "Gilfoyle",
+    "profilePict": "https://img.sharetv.com/shows/characters/large/silicon_valley.gilfoyle.jpg",
+    "sameFriend":25
+    }
+    
+]
