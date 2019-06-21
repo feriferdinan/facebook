@@ -7,8 +7,13 @@
         "text": "Linux is the best ;)",
         "image": "https://media.wired.com/photos/59265fd2af95806129f4f397/master/w_2400,c_limit/MicrosoftVista-4x3.jpg"
     },
-    "like": "132",
-    "comment": "13232"
+    "response": [
+        {"count":51,"name":"like1","type":"antdesign","color":"#4349DB"},
+        {"count":51,"name":"heart","type":"material-comunity","color":"#4349DB"},
+        {"count":51,"name":"emoticon-exited","type":"material-comunity","color":"#4349DB"},
+        {"count":51,"name":"emoticon-sad","type":"material-comunity","color":"#4349DB"},
+        {"count":51,"name":"emoticon-angry","type":"material-comunity","color":"#4349DB"}
+    ]
 },
 {
     "name": "Mark Zukenberk",
@@ -18,8 +23,14 @@
         "text": "Selamat Malam gan :)",
         "image": "https://image.cnbcfm.com/api/v1/image/104907724-Bill_Gates_Wave.jpg?v=1551374691&w=1400&h=950"
     },
-    "like": "132",
-    "comment": "13232"
+    
+    "response": [
+        {"count":51,"name":"like1","type":"antdesign","color":"#4349DB"},
+        {"count":51,"name":"heart","type":"material-comunity","color":"#4349DB"},
+        {"count":51,"name":"emoticon-exited","type":"material-comunity","color":"#4349DB"},
+        {"count":51,"name":"emoticon-sad","type":"material-comunity","color":"#4349DB"},
+        {"count":51,"name":"emoticon-angry","type":"material-comunity","color":"#4349DB"}
+    ]
 },
 {
     "name": "Linus Torvalds",
@@ -29,8 +40,14 @@
         "text": "Windows is the best",
         "image": "https://www.yubico.com/wp-content/uploads/2018/10/linux_final.gif"
     },
-    "like": "132",
-    "comment": "13232"
+    
+    "response": [
+        {"count":51,"name":"like1","type":"antdesign","color":"#4349DB"},
+        {"count":51,"name":"heart","type":"material-comunity","color":"#4349DB"},
+        {"count":51,"name":"emoticon-exited","type":"material-comunity","color":"#4349DB"},
+        {"count":51,"name":"emoticon-sad","type":"material-comunity","color":"#4349DB"},
+        {"count":51,"name":"emoticon-angry","type":"material-comunity","color":"#4349DB"}
+    ]
     },
 {
     "name": "Gilfoyle",
@@ -40,8 +57,14 @@
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu congue leo. Vestibulum nec lacus id orci malesuada lobortis. Aliquam condimentum viverra dui, at aliquet ante egestas at. Vivamus fringilla, enim eu ultricies ultricies, urna augue ornare ligula, et interdum quam urna ut diam. Sed sit amet malesuada dui. Morbi vulputate rhoncus nisl, sit amet maximus dolor mattis sit amet. Quisque lacinia finibus malesuada. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
         "image": "https://image.cnbcfm.com/api/v1/image/104907724-Bill_Gates_Wave.jpg?v=1551374691&w=1400&h=950"
     },
-    "like": "132",
-    "comment": "13232"
+    
+    "response": [
+        {"count":51,"name":"like1","type":"antdesign","color":"#4349DB"},
+        {"count":51,"name":"heart","type":"material-comunity","color":"#4349DB"},
+        {"count":51,"name":"emoticon-exited","type":"material-comunity","color":"#4349DB"},
+        {"count":51,"name":"emoticon-sad","type":"material-comunity","color":"#4349DB"},
+        {"count":51,"name":"emoticon-angry","type":"material-comunity","color":"#4349DB"}
+    ]
     }
 
     ]

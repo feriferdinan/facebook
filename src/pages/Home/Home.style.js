@@ -68,7 +68,7 @@ export default StyleSheet.create({
       
     },
     likeComment:{
-      width:24,
+      width:30,
       height:24,
       marginHorizontal:5,
     }

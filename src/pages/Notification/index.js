@@ -24,9 +24,11 @@ export default class index extends Component {
         <Header />
         <Tab  componentId={this.props.componentId} />
         <ScrollView>
-            <View>
-              
-            </View>
+        <View style={{backgroundColor:'#dddde3',width:'100%'}} >
+          <View style={{backgroundColor:'#ffffff',height:20}} >
+            <Text style={{fontWeight:'bold',color:"black"}}>Permintaan Pertemanan</Text>
+          </View>
+        </View>
           </ScrollView>
           </View>
     )

@@ -12,7 +12,7 @@ import Header from '../Home/Header'
 import Tab from '../Home/Tab'
 
 
-export default class Menu extends Component {
+export default class index extends Component {
 
     
     constructor(){

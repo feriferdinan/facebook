@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Text, TextInput, View ,Button,StyleSheet,Image,ScrollView,StatusBar,TouchableOpacity,ImageBackground} from 'react-native';
-import { Divider,ListItem } from 'react-native-elements';
+import { Divider,ListItem,Icon } from 'react-native-elements';
 
-import Icon from 'react-native-vector-icons/FontAwesome5';
+
+import IconFA5 from 'react-native-vector-icons/FontAwesome5';
 import IconAnt from 'react-native-vector-icons/AntDesign';
 import IconIon from 'react-native-vector-icons/Ionicons';
 import IconMCI from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -57,8 +58,19 @@ export default class CreateStatus extends Component {
                   <TouchableOpacity>                  
                   <View style={{width:"100%",width:"100%",  flexDirection:'row',flexWrap:"wrap"}} >
                     <Image source={{uri:item.content.image}} style={{height:105,width:'100%'}} />
-                  
                 </View>
+                 <TouchableOpacity>
+                <View style={{flexDirection:"row"}} >
+                 <View style={{marginLeft:5}} >
+                  <Icon name={item.response[0].name} 
+                        type={item.response[0].type}
+                        color={item.response[0].color}
+                        size={13}
+                    />
+                    </View>
+                <Text>{item.response[0].count}</Text>
+                </View>
+                </TouchableOpacity>
                 </TouchableOpacity>
                   
               </View>
@@ -76,7 +88,7 @@ export default class CreateStatus extends Component {
                 
                 <View style={styles.wrapperLikeComment} >
                 <TouchableOpacity>
-                <Icon style={styles.likeComment}  name="comment-alt" size={25} color="grey" />
+                <IconFA5 style={styles.likeComment}  name="comment-alt" size={25} color="grey" />
                  
                   </TouchableOpacity>
                 </View>

@@ -52,7 +52,7 @@ export default class Tab extends Component {
           </View>
           <View style={styles.wrapperIconTab} >
             <TouchableOpacity>
-                <IconIon style={styles.iconTab}  name="ios-notifications-outline" size={30} color="grey" onPress={() => this.goToScreen("Home")} />
+                <IconIon style={styles.iconTab}  name="ios-notifications-outline" size={30} color="grey" onPress={() => this.goToScreen("Notification")} />
             </TouchableOpacity>
           </View>
           <View style={styles.wrapperIconTab} >
