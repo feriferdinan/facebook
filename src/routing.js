@@ -31,7 +31,7 @@ Navigation.events().registerAppLaunchedListener(() => {
         stack: {
             children: [{
                 component: {
-                    name: "Profile"
+                    name: "Login"
                 }
             }]
         }
