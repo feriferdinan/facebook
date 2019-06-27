@@ -17,7 +17,7 @@ export default class StatusBody extends Component {
 
 
 
-   
+  
 
   render() {
       const {text,image} = this.props;
@@ -31,7 +31,12 @@ export default class StatusBody extends Component {
                 </TouchableOpacity>
                   <TouchableOpacity>                  
                    <View style={{width:"100%",width:"100%",  flexDirection:'row',flexWrap:"wrap"}} >
-                    <Image source={{uri:image}} style={{height:300,width:'100%',resizeMode:"cover"}} />
+              {
+                (image) ?
+                   <Image source={{uri:image }}  style={{ height:300,width:'100%',resizeMode:"cover"}}/>
+                  : <Image />
+              }
+                  
                 </View>
         
                 </TouchableOpacity>
@@ -40,5 +45,3 @@ export default class StatusBody extends Component {
     )
   }
 }
-
-

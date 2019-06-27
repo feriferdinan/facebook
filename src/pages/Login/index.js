@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import { Modal, Text, TextInput, View ,Button,StyleSheet,Image,ScrollView,StatusBar,TouchableOpacity,TouchableHighlight} from 'react-native';
+import {Alert,Modal, Text, TextInput, View ,Button,StyleSheet,
+  Image,ScrollView,StatusBar,TouchableOpacity,TouchableHighlight,AsyncStorage} from 'react-native';
 import { Navigation } from 'react-native-navigation';
 
-import styles from './Login.style'
+const axios = require('axios');
 
+import styles from './Login.style'
 
 
 export default class Login extends Component {
@@ -19,10 +21,15 @@ export default class Login extends Component {
       buttonRegister:'BUAT AKUN FACEBOOK BARU',
       buttonMoreLanguage:'Lainnya...',
 
-      modalVisible:false
+      inputEmail:"",
+      inputPass:"",
+
+      modalVisible:false,
+     
     }
     
   }
+
   
   toEnglishLanguage = () => {
     this.setState({
@@ -47,18 +54,82 @@ export default class Login extends Component {
     })
   }
 
+
+
+  handleLogin =  () => {
+      axios.post("http://192.168.0.24:3000/auth/signin",{
+        "email" : this.state.inputEmail,
+        "password" : this.state.inputPass
+      })
+      .then(res =>{
+        const  data = res.data.data
+        axios.post("http://192.168.0.24:3000/auth/create/authorization",{
+          "user_id" : data.id,
+          "name" : data.name,
+          "email" :data.email
+        })
+        .then (res => {
+          console.log(res.data.data.token)
+          console.log(data)
+          if (data == null){
+            alert("Tidak Dapat Menemukan Akun")
+          }else{
+            AsyncStorage.setItem('token', res.data.data.token);
+             Navigation.push(this.props.componentId,{
+               component:{
+                 name:"Home"
+               }
+             })
+          }
+        })
+        .catch(err => {
+          alert("Tidak Dapat Menemukan Akun ")
+          console.log("auth create",err)
+        })
+      })
+      .catch(err =>{
+        Alert.alert(
+          'Tidak Dapat Menemukan Akun',
+          `Kelihatanya ${this.state.inputEmail} tidak cocok dengan akun yang ada. Jika Anda belum memiliki akun Facebook, Anda dapat membuatnya sekarang. `,
+          [
+            {
+              text: 'BUAT AKUN',
+              onPress: () => console.log(' Pressed'),
+              style: "default",
+            },
+            {text: 'COBA LAGI',  onPress:this.handleLogin},
+          ],
+         
+        );
+        console.log('erordi auth sign in:',err)
+      })
+  }
+
+  async componentDidMount(){
+    const value = await AsyncStorage.getItem('token')
+    if(value !== null ){
+      await Navigation.push(this.props.componentId,{
+         component:{
+           name:"Home"
+         }
+       });
+     }
+
+   }
+
   
   setModalVisible(visible){
     this.setState({modalVisible:visible})
   }
-  goToHome = (screenName) => {
-    Navigation.push(this.props.componentId,{
-      component:{
-        name:screenName
-      }
-    });
-  }
+  // goToHome = (screenName) => {
+  //   Navigation.push(this.props.componentId,{
+  //     component:{
+  //       name:screenName
+  //     }
+  //   });
+  // }
 
+  
   render() {
     return (
      <ScrollView>
@@ -118,7 +189,7 @@ export default class Login extends Component {
               </TouchableHighlight>
             </View>
           </View>
-        </Modal>
+        </Modal>  
           </View>
           <View style={styles.form}>
             <View  style={styles.wrapperInput} >
@@ -126,6 +197,9 @@ export default class Login extends Component {
                     style={styles.textInput} 
                     placeholder={this.state.email}
                     underlineColorAndroid='#2D598C'
+                    onChangeText={(email) => this.setState({
+                      inputEmail:email
+                    })}
                     />
                     <TextInput 
                     style={styles.textInput} 
@@ -133,10 +207,13 @@ export default class Login extends Component {
                     textContentType='password'
                     secureTextEntry={true}
                     underlineColorAndroid='#2D598C'
+                    onChangeText={(pass) => this.setState({
+                      inputPass:pass
+                    })}
                     />
                     <Button title={this.state.buttonLogin}
                      color='#213970'
-                     onPress={() => this.goToHome('Home')}
+                     onPress={this.handleLogin}
                       />
             </View>
       <View style={styles.wrapperButtonForgot} >

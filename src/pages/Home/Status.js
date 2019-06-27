@@ -28,25 +28,22 @@ export default class Status extends Component {
         {
             this.props.data.map((item,index) => {
                 return(
-          <View key={index} style={{marginTop:5,marginBottom:5}}  >
-             <StatusHeader 
-                profilePict={item.profilePict}
-                name={item.name}
-                datePost={item.datePost}
-              />
-            
-                <StatusBody 
-                text={item.content.text}
-                image={item.content.image}
-                />
-
-              <StatusFooter response={item.response} />
-
-           
-          </View>
+                  <View key={index} style={{marginTop:5,marginBottom:5}}  >
+                    <StatusHeader 
+                        id={item.id}
+                        avatar={item.user.avatar}
+                        name={item.user.name}
+                        createdAt={item.createdAt}
+                      />
+                      <StatusBody 
+                        text={item.content}
+                        image={item.media}
+                      />
+                      <StatusFooter response={item.response} />
+                  </View>
                 )
             }) 
-          }
+        }
           </View>
     )
   }

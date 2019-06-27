@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Text, TextInput, View ,Button,StyleSheet,Image,ScrollView,StatusBar,TouchableOpacity} from 'react-native';
+import {AsyncStorage, Text, TextInput, View ,Button,StyleSheet,Image,ScrollView,StatusBar,TouchableOpacity} from 'react-native';
 import { Divider,ListItem } from 'react-native-elements';
-
+import { Navigation } from 'react-native-navigation';
 
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import IconAnt from 'react-native-vector-icons/AntDesign';
@@ -21,6 +21,15 @@ export default class index extends Component {
          menu: require('../../data/menu.json')
   
         }
+      }
+
+      _handleLogout = () =>{
+        AsyncStorage.clear();
+        Navigation.push(this.props.componentId,{
+            component:{
+              name:"Login"
+            }
+          })
       }
 
   render() {
@@ -61,7 +70,19 @@ export default class index extends Component {
                 )
             }) 
           }
-            <View style={{marginBottom:25}} >
+
+          <Divider style={{backgroundColor:'grey'}} />
+          <TouchableOpacity   >
+                <ListItem 
+                    containerStyle={{backgroundColor:"#f5f6f8"}}
+                    title="Keluar"
+                    leftIcon={{ name:"log-out",type:"entypo", color:'#4167b2' }}
+                    onPress={this._handleLogout}
+                />
+            </TouchableOpacity>
+          <Divider style={{backgroundColor:'grey'}} />
+
+            <View style={{marginBottom:100}} >
 
             </View>
           </ScrollView>

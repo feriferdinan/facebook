@@ -25,9 +25,9 @@ export default class StatusFooter extends Component {
           total:0,
         }
     }
-    _setTotal =() =>{
-        return this.props.response.reduce((a,b) =>a+b.count,0 );
-    }
+    // _setTotal =() =>{
+    //     return this.props.response.reduce((a,b) =>a+b.count,0 );
+    // }
     _pressLikeIcon =(icon)=>{
       if(this.state.iconPress){
         this.setState({
@@ -51,23 +51,24 @@ export default class StatusFooter extends Component {
         }
       }
     }
-    componentDidMount(){
-        this.setState({
-            total: this._setTotal(),
-            response:this.props.response
-        })
-    }
+    // componentDidMount(){
+    //     this.setState({
+    //         total: this._setTotal(),
+    //         response:this.props.response
+    //     })
+    // }
 
-  render() {
-   
-    return (
+    render() {
+      
+      return (
         
-                 <View>
-                 <TouchableOpacity>
+        <View>
+               
+                <TouchableOpacity>
                    <View style={{flexDirection:'row',backgroundColor:'white',height:40}} >
                     <ReactionPost response={this.state.response} />
                     <View style={{justifyContent:"center"}} >
-                    <Text>{this.state.total}</Text>
+                    <Text  >{this.state.total}</Text>
                     </View>
                 </View>
                     </TouchableOpacity>
