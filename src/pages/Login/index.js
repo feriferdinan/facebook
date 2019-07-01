@@ -7,6 +7,8 @@ const axios = require('axios');
 
 import styles from './Login.style'
 
+import configs from '../../../config'
+
 
 export default class Login extends Component {
 
@@ -30,7 +32,6 @@ export default class Login extends Component {
     
   }
 
-  
   toEnglishLanguage = () => {
     this.setState({
       email:'Phone or Email',
@@ -54,16 +55,14 @@ export default class Login extends Component {
     })
   }
 
-
-
   handleLogin =  () => {
-      axios.post("http://192.168.0.24:3000/auth/signin",{
+      axios.post(`http://${configs.ipaddress}:3000/auth/signin`,{
         "email" : this.state.inputEmail,
         "password" : this.state.inputPass
       })
       .then(res =>{
         const  data = res.data.data
-        axios.post("http://192.168.0.24:3000/auth/create/authorization",{
+        axios.post(`http://${configs.ipaddress}:3000/auth/create/authorization`,{
           "user_id" : data.id,
           "name" : data.name,
           "email" :data.email
@@ -173,10 +172,10 @@ export default class Login extends Component {
               }} > {this.state.buttonMoreLanguage}</Text>
               </TouchableHighlight>
               <Modal
-          animationType="slide"
-          transparent={false}
-          visible={this.state.modalVisible}
-         >
+                animationType="slide"
+                transparent={false}
+                visible={this.state.modalVisible}
+              >
           <View style={{marginTop: 22}}>
             <View>
               <Text>Hello World!</Text>
@@ -194,40 +193,40 @@ export default class Login extends Component {
           <View style={styles.form}>
             <View  style={styles.wrapperInput} >
                     <TextInput 
-                    style={styles.textInput} 
-                    placeholder={this.state.email}
-                    underlineColorAndroid='#2D598C'
-                    onChangeText={(email) => this.setState({
-                      inputEmail:email
-                    })}
+                      style={styles.textInput} 
+                      placeholder={this.state.email}
+                      underlineColorAndroid='#2D598C'
+                      onChangeText={(email) => this.setState({
+                        inputEmail:email
+                      })}
                     />
                     <TextInput 
-                    style={styles.textInput} 
-                    placeholder={this.state.password}
-                    textContentType='password'
-                    secureTextEntry={true}
-                    underlineColorAndroid='#2D598C'
-                    onChangeText={(pass) => this.setState({
-                      inputPass:pass
-                    })}
+                      style={styles.textInput} 
+                      placeholder={this.state.password}
+                      textContentType='password'
+                      secureTextEntry={true}
+                      underlineColorAndroid='#2D598C'
+                      onChangeText={(pass) => this.setState({
+                        inputPass:pass
+                      })}
                     />
                     <Button title={this.state.buttonLogin}
                      color='#213970'
                      onPress={this.handleLogin}
                       />
             </View>
-      <View style={styles.wrapperButtonForgot} >
-          <Text style={styles.buttonForgot} >{this.state.buttonForgotPassword}</Text>
-      </View>
-        <View style={styles.wrapperHr}>
-          <Text style={styles.hr} ></Text>
-          <Text style={{justifyContent:'center', alignContent:'center'}} >{this.state.dashOr}</Text>
-          <Text style={styles.hr} ></Text>
-        </View>
+          <View style={styles.wrapperButtonForgot} >
+              <Text style={styles.buttonForgot} >{this.state.buttonForgotPassword}</Text>
+          </View>
+          <View style={styles.wrapperHr}>
+            <Text style={styles.hr} ></Text>
+            <Text style={{justifyContent:'center', alignContent:'center'}} >{this.state.dashOr}</Text>
+            <Text style={styles.hr} ></Text>
+          </View>
 
-        <View style={styles.wrapperButtonSignUp} >
-            <Button color='#00A400' title={this.state.buttonRegister} />
-        </View>
+          <View style={styles.wrapperButtonSignUp} >
+              <Button color='#00A400' title={this.state.buttonRegister} />
+          </View>
 
         </View>
  </View>

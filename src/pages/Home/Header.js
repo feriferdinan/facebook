@@ -12,19 +12,11 @@ import IconEvil from 'react-native-vector-icons/EvilIcons';
 
 
 export default class Header extends Component {
-  state = {
-    search: '',
-  };
-
-  updateSearch = search => {
-    this.setState({ search });
-  };
+ 
 
   render() {
-    const { search } = this.state;
     return (
        <View>
-            {/* Search */}
             <View style={{ backgroundColor:'#4167b2',width:'100%', height:50}} >
             <View style={{flex:1,flexDirection:'row',paddingHorizontal:6}} >
                 <View style={{flex:1}} >

@@ -20,7 +20,7 @@ export default class Story extends Component {
                  source={require('../../assets/img/icon/plus.jpg')} />
                  <Text style={styles.namePeopleStory} >Tambahkan Ke Cerita</Text>
          </View>
-         {
+        {
              this.props.data.map((item,index) => {
                  return(
                    <View style={styles.wrapperImageStory} key={index} >
@@ -34,7 +34,7 @@ export default class Story extends Component {
                  </View>
                  );
              }) 
-           }
+        }
          
        </View>
        </View>

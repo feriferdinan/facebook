@@ -23,7 +23,7 @@ export default class StatusBody extends Component {
       const {text,image} = this.props;
    
     return (            
-              <View style={{backgroundColor:'#ffffff'}}  >
+              <View style={{backgroundColor:'#ffffff',paddingBottom:10}}  >
               <TouchableOpacity>
                 <View style={{marginHorizontal:9}} >
                   <Text style={{padding:5}} >{text}</Text>
@@ -34,7 +34,7 @@ export default class StatusBody extends Component {
               {
                 (image) ?
                    <Image source={{uri:image }}  style={{ height:300,width:'100%',resizeMode:"cover"}}/>
-                  : <Image />
+                  : <View />
               }
                   
                 </View>

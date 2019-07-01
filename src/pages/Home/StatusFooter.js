@@ -63,15 +63,17 @@ export default class StatusFooter extends Component {
       return (
         
         <View>
-               
-                <TouchableOpacity>
+               {
+                    (this.state.total  == 0) ? <View /> :
+                  <TouchableOpacity>
                    <View style={{flexDirection:'row',backgroundColor:'white',height:40}} >
-                    <ReactionPost response={this.state.response} />
-                    <View style={{justifyContent:"center"}} >
-                    <Text  >{this.state.total}</Text>
-                    </View>
-                </View>
-                    </TouchableOpacity>
+                      <ReactionPost response={this.state.response} />
+                        <View style={{justifyContent:"center"}} >
+                          <Text >{this.state.total}</Text>
+                        </View>
+                  </View>
+                  </TouchableOpacity>
+              }
 
               <Divider style={{backgroundColor:'grey'}} />
               <View style={{width:'100%', height:40,backgroundColor:'#ffffff'}} >

@@ -10,30 +10,37 @@ export default class index extends Component {
     
     constructor(){
         super()
-        const value =  AsyncStorage.getItem('token')
-      }
-
-      
-
-      async componentWillMount(){
-          (this.value!==null) ? 
-                  setTimeout(()=>{
+        var value =  AsyncStorage.getItem('token')
+        {
+        setTimeout( ()=>{
+          (value===null) ?
+                    Navigation.push(this.props.componentId,{
+                          component:{
+                            name:"Login"
+                          }
+                        })
+                      :
                     Navigation.push(this.props.componentId,{
                           component:{
                             name:"Home"
-                          }
-                        })
-                  },4000)  
-                :
-                setTimeout(()=>{
-                 Navigation.push(this.props.componentId,{
-                       component:{
-                         name:"Login"
-                       }
-                     })
-               },4000)   
+                              }
+                            })
+                      
+                  },1500)  
+        }
+                
+      }
+      
+      
+      
+    //   async componentWillMount(){
+    //     that=this
+    //     console.log('initokendari splash ' + value)
+      
+                
+        
          
-    }
+    // }
     
 
   render() {

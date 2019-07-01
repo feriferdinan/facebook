@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import {BackHandler,AsyncStorage, Modal,Text, TextInput, View ,Button,StyleSheet,Image,ScrollView,StatusBar,TouchableOpacity,ImageBackground} from 'react-native';
+import {Alert,BackHandler,AsyncStorage, Modal,Text, TextInput, View ,Button,StyleSheet,Image,ScrollView,StatusBar,TouchableOpacity,ImageBackground} from 'react-native';
 import { Divider,ListItem,Icon } from 'react-native-elements';
+import { Navigation } from 'react-native-navigation';
 
 import TimeAgo from 'react-native-timeago';
 import IconFA5 from 'react-native-vector-icons/FontAwesome5';
@@ -11,8 +12,8 @@ import IconF from 'react-native-vector-icons/Feather';
 
 const axios = require('axios');
 
-
 import styles from './Home.style'
+import configs from '../../../config'
 
 
 export default class StatusHeader extends Component {
@@ -23,7 +24,6 @@ export default class StatusHeader extends Component {
        return this.setModalVisible(false)
      
     });
-  
     this.state={
       modalVisible:false,
 
@@ -43,6 +43,26 @@ export default class StatusHeader extends Component {
     console.log("ini token statusheader",this.state.token)
    }
 
+  _deletePostConfirm = (id) => {
+    this.setModalVisible(false)
+     var id =id
+      Alert.alert(
+      'Hapus Postigan?',
+      'Anda bisa mengeditnya jika ingin mengubah sesuatu',
+      [
+        {text: 'Hapus', onPress:()=> this._deletePost(id) },
+        {
+          text: 'Edit',
+          onPress:()=> this._updatePost(id)
+        },
+        {text: 'Batal', onPress: () => console.log('OK Pressed'),
+        style: 'cancel',
+        },
+      ],
+      {cancelable: true},
+    );
+   }
+
   _deletePost = (id) => {
     var id = id
     console.log(id)
@@ -52,7 +72,7 @@ export default class StatusHeader extends Component {
         'Authorization': 'jwt ' + this.state.token
       }
     }
-    axios.delete(`http://192.168.0.24:3000/feeds/${id}`,config)
+    axios.delete(`http://${configs.ipaddress}:3000/feeds/${id}`,config)
     .then(function (response) {
       console.log(response.data)
     })
@@ -62,22 +82,19 @@ export default class StatusHeader extends Component {
     });
   }
 
-  _updatePost = (id) => {
-    var id = id
-    console.log(id)
-    that = this
-     let config = {
-      headers: {
-        'Authorization': 'jwt ' + this.state.token
+  _updatePost = async (id) => {
+    this.setModalVisible(false)
+    await Navigation.push(this.props.componentId,{
+      component:{
+        name:"EditStatus",
+        passProps: {
+          id: id
+        }
       }
-    }
-    axios.get(`http://192.168.0.24:3000/feeds/${id}`,config)
-    .then(function (response) {
-      console.log(response.data.data)
-    }) .catch(function (error) {
-      console.log(error);
-    });
+    })
   }
+
+  
 
   
 
@@ -92,7 +109,7 @@ export default class StatusHeader extends Component {
           visible={this.state.modalVisible}
           >
           <TouchableOpacity  onPress={()=>this.setModalVisible(false)} >
-          <View style={{height:460,backgroundColor:"rgba(0, 0, 0, 0.3)"}} />
+          <View style={{height:605,backgroundColor:"rgba(0, 0, 0, 0.3)"}} />
           </TouchableOpacity>
           <TouchableOpacity   >
             <View style={{positon:"absolute",bottom:0}}>
@@ -100,7 +117,7 @@ export default class StatusHeader extends Component {
                       containerStyle={{backgroundColor:"#ffff"}}
                       title="Hapus"
                       leftIcon={{ name:"trash",type:"evilicon", color:'grey' }}
-                      onPress={()=>this._deletePost(id)}
+                      onPress={()=>this._deletePostConfirm(id)}
                   />
                   <ListItem 
                       containerStyle={{backgroundColor:"#ffff"}}
@@ -111,22 +128,23 @@ export default class StatusHeader extends Component {
                   
               </View>
             </TouchableOpacity>  
-  
         </Modal>
-        
-              <TouchableOpacity>
-            <View style={{flex:1,flexDirection:'row',paddingHorizontal:6 , backgroundColor:'#ffffff'}}  >
+            <TouchableOpacity>
+              <View style={{flex:1,flexDirection:'row',paddingHorizontal:6 , backgroundColor:'#ffffff'}}  >
               <View style={{flex:1,marginTop:10}} >
-                  <Image style={styles.imageProfile}
-                  source={{uri:avatar}}
+                  <Image 
+                    style={styles.imageProfile}
+                    source={{uri:avatar}}
                   />
               </View>
               <View style={{flex:6,margin:10}} >
-              <Text style={{fontWeight:'bold',color:'black'}} >{name}</Text>
-              
-              <TimeAgo time={createdAt} interval={30000} />
-              
-                  </View>
+                <Text style={{fontWeight:'bold',color:'black'}} >{name}</Text>
+                <View style={{flexDirection:"row"}} >
+                <TimeAgo time={createdAt} interval={30000} />
+                <Text style={{marginHorizontal:5}} >&bull;</Text>
+                <IconAnt  name="earth" size={13} color="grey"  style={{textAlignVertical:"center"}}/>
+                </View>
+              </View>
               <TouchableOpacity onPress={() => {this.setModalVisible(true)}} >
                 <View style={{flex:1,marginTop:15}} >
                   <IconF name="more-horizontal" size={30} color="grey" />
@@ -134,8 +152,6 @@ export default class StatusHeader extends Component {
               </TouchableOpacity>
               </View>
               </TouchableOpacity>
-
-      
               </View>
     )
   }

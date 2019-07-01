@@ -7,6 +7,7 @@ import MarketPlace from './pages/MarketPlace/index';
 import Profile from './pages/Profile/index';
 import Menu from './pages/Menu/index';
 import Notification from './pages/Notification/index';
+import EditStatus from './pages/Home/EditStatus';
 
 import { Navigation } from 'react-native-navigation';
 
@@ -18,6 +19,7 @@ Navigation.registerComponent(`MarketPlace`, () => MarketPlace);
 Navigation.registerComponent(`Profile`, () => Profile);
 Navigation.registerComponent(`Notification`, () => Notification);
 Navigation.registerComponent(`Menu`, () => Menu);
+Navigation.registerComponent(`EditStatus`, () => EditStatus);
 
 Navigation.setDefaultOptions({
   topBar: {
