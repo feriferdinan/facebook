@@ -57,8 +57,6 @@ Facebook, Inc. is a social networking service headquartered in Menlo Park, Calif
   <img src="https://img.shields.io/badge/Project-Website-blue.svg"/>
 </a>
 
-## Trello
-You can see the Trello for this project [`here`](https://trello.com/b/mV2ugtoJ/tokopedia-clone)
 
 
 ## Contributors
