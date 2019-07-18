@@ -1,7 +1,7 @@
 <h1 align="center">:octocat: Cloning Facebook :octocat:</h1>
 
   <p align="center">
-  <img width="150" src=https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/600px-Facebook_f_logo_%282019%29.svg.png"/>
+  <img width="150" src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"/>
   </p>
   <p align="center">
   Built with React Native.
@@ -21,8 +21,8 @@ Facebook, Inc. is a social networking service headquartered in Menlo Park, Calif
 
 
 ## Features
-* Users can see all product and product detail
-* Users can buy and move product to Keranjang and can't add product same 
+* Users can see People Feeds
+* Users can make Feeds 
 * Notification number product in keranjang
 * And more
 
@@ -39,7 +39,7 @@ Facebook, Inc. is a social networking service headquartered in Menlo Park, Calif
    ```
 2. Install all depedencies on the package.json
    ```
-      cd cloning-tokopedia 
+      cd clone-facebook 
       npm install
    ```
 3. Run Facebook
@@ -49,14 +49,11 @@ Facebook, Inc. is a social networking service headquartered in Menlo Park, Calif
 
 ## Screenshoot
 <div align="center">
-    <img width="600" src="https://github.com/falihnaufal17/cloning-tokopedia/blob/master/Screenshoot/Home.JPG">    
-    <img width="600" src="https://github.com/falihnaufal17/cloning-tokopedia/blob/master/Screenshoot/detail.JPG">
-    <img width="600" src="https://github.com/falihnaufal17/cloning-tokopedia/blob/master/Screenshoot/cardlist.JPG">
-  <img width="600" src="https://github.com/falihnaufal17/cloning-tokopedia/blob/master/Screenshoot/transaksi.JPG">
+    <img width="600" src="">    
 </div>
 
 ## Website 
-<a href="https://clone-tokopedia.netlify.com/">
+<a href="">
   <img src="https://img.shields.io/badge/Project-Website-blue.svg"/>
 </a>
 
