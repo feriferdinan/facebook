@@ -22,8 +22,7 @@ Facebook, Inc. is a social networking service headquartered in Menlo Park, Calif
 
 ## Features
 * Users can see People Feeds
-* Users can make Feeds 
-* Notification number product in keranjang
+* Users can make,edit, and delete own Feeds 
 * And more
 
 ## Requirements
