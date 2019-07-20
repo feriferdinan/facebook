@@ -49,7 +49,12 @@ Facebook, Inc. is a social networking service headquartered in Menlo Park, Calif
 
 ## Screenshoot
 <div align="center">
-    <img width="600" src="">    
+    <img width="200" src="https://github.com/feriferdinan/clone-facebook/blob/master/src/assets/ss/1.jpeg">
+    <img width="200" src="https://github.com/feriferdinan/clone-facebook/blob/master/src/assets/ss/2.jpeg">
+    <img width="200" src="https://github.com/feriferdinan/clone-facebook/blob/master/src/assets/ss/3.jpeg">
+    <img width="200" src="https://github.com/feriferdinan/clone-facebook/blob/master/src/assets/ss/4.jpeg">
+    <img width="200" src="https://github.com/feriferdinan/clone-facebook/blob/master/src/assets/ss/5.jpeg">
+    <img width="200" src="https://github.com/feriferdinan/clone-facebook/blob/master/src/assets/ss/6.jpeg">
 </div>
 
 ## Website 
