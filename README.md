@@ -13,14 +13,14 @@
 - [Features](#features)
 - [Requirements](#requirements)
 - [Screenshots](#screenshots)
-- [Trello](#trello)
+- [Download Apk](#download-the-apk)
 - [Contributors](#contributors)
 
 ## Introduction
 Facebook, Inc. is a social networking service headquartered in Menlo Park, California, United States which was launched in February 2004. Until September 2012, Facebook has more than one billion active users, more than half of them using cellphones.
 
 ## Related Project
-* <a href="https://github.com/feriferdinan/chat-app-backend-adonis">AdonisJs - CHAT App RESTfull API</a>
+* <a href="https://github.com/feriferdinan/clone-facebook-backend">ExpressJs - Clone Facebook RESTfull API</a>
 
 ## Features
 * Users can see People Feeds
@@ -58,11 +58,8 @@ Facebook, Inc. is a social networking service headquartered in Menlo Park, Calif
     <img width="200" src="https://github.com/feriferdinan/clone-facebook/blob/master/src/assets/ss/6.jpeg">
 </div>
 
-## Website 
-<a href="">
-  <img src="https://img.shields.io/badge/Project-Website-blue.svg"/>
-</a>
-
+## Download the APK
+You can Download the APK <a href="#">Here!</a>
 
 
 ## Contributors
