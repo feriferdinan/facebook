@@ -30,17 +30,17 @@ Facebook, Inc. is a social networking service headquartered in Menlo Park, Calif
 ## Requirements
 * [`npm`](https://www.npmjs.com/get-npm)
 * [`react-native`](https://facebook.github.io/react-native/)
-
+* [`react-native-navigation`](https://wix.github.io/react-native-navigation/#/)
 
 ## How To RUn
 
 1. Clone this repository
    ```
-   $ git clone https://github.com/feriferdinan/clone-facebook.git
+   $ git clone https://github.com/feriferdinan/facebook.git
    ```
 2. Install all depedencies on the package.json
    ```
-      cd clone-facebook 
+      cd facebook 
       npm install
    ```
 3. Run Facebook
