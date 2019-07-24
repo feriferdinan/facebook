@@ -20,7 +20,7 @@
 Facebook, Inc. is a social networking service headquartered in Menlo Park, California, United States which was launched in February 2004. Until September 2012, Facebook has more than one billion active users, more than half of them using cellphones.
 
 ## Related Project
-* <a href="https://github.com/feriferdinan/clone-facebook-backend">ExpressJs - Clone Facebook RESTfull API</a>
+* <a href="https://github.com/feriferdinan/facebook-backend-express">ExpressJs - Clone Facebook RESTfull API</a>
 
 ## Features
 * Users can see People Feeds
